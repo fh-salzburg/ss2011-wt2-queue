@@ -1,0 +1,5 @@
+<%= form_for @business_card, :html => { :multipart => true } do |f| %>
+  <%= f.text_field :name %><br />
+  <%= f.file_field :image %><br />
+  <%= f.submit %>
+<% end %>

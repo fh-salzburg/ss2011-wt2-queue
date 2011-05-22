@@ -1,0 +1,11 @@
+<h1>Cards</h1>
+
+<ul>
+  <% @business_cards.each do |business_card| %>
+    <li>
+      <%= link_to_if(business_card.card.exists?, h(business_card.name), business_card.card.url) %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Neue Visitenkarte", new_business_card_path %>
